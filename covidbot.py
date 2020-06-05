@@ -3,7 +3,8 @@ import requests
 import json
 import discord
 
-TOKEN = ""
+f = open("TOKEN.txt", 'r')
+TOKEN = f.readline()
 
 client = discord.Client()
 
@@ -83,4 +84,4 @@ async def on_ready():
     print(client.user.id)
     print("------")
 
-client.run("Njc5NDI0NTYxNDg5Mzc5MzMw.XkznFg.i8c-Vb9zrMiQzYPjlOINEX3RPfk")
+client.run(TOKEN)
